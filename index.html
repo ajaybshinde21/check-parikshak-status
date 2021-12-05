@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #232323;
+        color: #ccc;
+        /* font-size: 3rem; */
+        text-align: center;
+      }
+      h1 {
+        margin-top: 20%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>checked : <span id="count"> </span></h1>
+    <script>
+      // https://www.google.com/?&bih=948&biw=1920&hl=en
+      const xhttp = new XMLHttpRequest();
+
+      let i = 0;
+      xhttp.onload = function () {
+        window.open("https://www.youtube.com/watch?v=Kas6akz1jWU");
+        window.close();
+      };
+      function loadDoc() {
+        xhttp.open("GET", "http://10.182.0.6:8080/parikshak/");
+        xhttp.send();
+      }
+      let spanNode = document.getElementById("count");
+      console.log(count);
+      loadDoc();
+      i += 1;
+      count.innerHTML = i + " times";
+      setInterval(function () {
+        i += 1;
+        loadDoc();
+        count.innerHTML = i + " times";
+      }, 600000);
+    </script>
+  </body>
+</html>
